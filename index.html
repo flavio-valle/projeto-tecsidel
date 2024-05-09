@@ -17,8 +17,8 @@
     <!-- <script src="./js/drawer.js" type="module"></script> -->
 </head>
 <body>
-  <div class="nav-menu">
-    <img class="nav-menu-icon" src="assets/Icons/icons8-cardápio.svg" alt="" onclick="handleNavMenu">
+  <div id="nav-menu">
+    <img class="nav-menu-icon" src="assets/Icons/icons8-cardápio.svg" alt="" onclick="handleNavMenu()">
     <div class="nav-title">
       <img src="assets/TecsidelLogo.svg"/>
       <h1>Tecsidel</h1>
@@ -26,7 +26,7 @@
     
   </div>
   
-  <div class="drawer-menu">
+  <div id="drawer-menu">
     <div>
       <div class="drawer-title">
 
@@ -50,7 +50,7 @@
 
   </div>
 
-  <div class="main-container">
+  <div class="main-container" onclick="handleMainContainer()">
     <h1>Estação 8e943893u4t</h1>
 
     <div class="cameras">
@@ -66,9 +66,5 @@
 
 </body>
 <script src="js/script.js"></script>
-<script>
-  function handleNavMenu() {
-      document.querySelector('.drawer-menu').style.visibility='visible';
-  }
-  </script>
+<script src="js/drawerResponsiveness.js"></script>
 </html>

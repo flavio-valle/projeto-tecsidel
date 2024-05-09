@@ -12,7 +12,7 @@ h1{
 	font-size: 21px;
 }
 
-.drawer-menu {
+#drawer-menu {
 	position: fixed;
 	top: 0;
 	z-index: 2;
@@ -69,7 +69,7 @@ h1{
 	color: #00425A;
 }
 
-.nav-menu {
+#nav-menu {
 	display: flex;
 	align-items: center;
 	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -93,16 +93,22 @@ h1{
 }
 
 @media (max-width: 1000px) {
-	.drawer-menu {
+	#drawer-menu {
 		visibility: hidden;
 	}
 
-	.nav-menu {
+	#nav-menu {
 		visibility: visible;
 	}
 
 	.main-container {
 		margin-left: 0;
+	}
+}
+
+@media (min-width: 1000px) {
+	#drawer-menu {
+		visibility: visible;
 	}
 }
 
