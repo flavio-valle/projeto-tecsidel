@@ -4,27 +4,106 @@ input, button
 	background-color: rgba(0,0,0,0);
 }
 
+h1{
+	font-family: "Epilogue", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+	font-size: 21px;
+}
+
 .drawer-menu {
 	position: fixed;
 	top: 0;
 	z-index: 2;
 	
-	background-color: grey;
-	width: 200px;
+	background-color: #fff;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	width: 300px;
 	height: 100%;
+
+	padding: 29px 22px;
 
 	display: flex;
 	flex-direction: column;
-	align-items: start;
+	align-items: flex-start;
+}
+
+.drawer-title{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.drawer-items {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	margin-top: 44px;
 }
 
 .drawer-button {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	/* justify-content: space-between; */
 	background-color: rgba(0,0,0,0);
+	align-items: center;
+}
 
+
+.drawer-button:hover {
+	cursor: pointer;
+
+	transform: scale(1.05);
+}
+
+.drawer-item{
+	font-family: "Poppins", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	
+	font-size: 15px;
+	margin: auto auto;
+	margin-left: 15px;
+	color: #00425A;
+}
+
+.nav-menu {
+	display: flex;
+	align-items: center;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	height: 80px;
+	justify-content: space-between;
+	visibility: hidden;
+}
+
+.nav-title{
+	display: flex;
+}
+
+.nav-menu-icon:hover {
+	cursor: pointer;
+
+	transform: scale(1.05);
 }
 
 .main-container {
-	margin-left: 200px;
+	margin-left: 300px;
+}
+
+@media (max-width: 1000px) {
+	.drawer-menu {
+		visibility: hidden;
+	}
+
+	.nav-menu {
+		visibility: visible;
+	}
+
+	.main-container {
+		margin-left: 0;
+	}
 }
 
 .cameras {
@@ -48,5 +127,5 @@ input, button
 	cursor: pointer;
 
 	box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-	transform: scale(1.01);
+	transform: scale(1.05);
 }
