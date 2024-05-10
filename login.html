@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Tecsidel</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+        }
+
+        .container-fluid {
+            padding: 0;
+        }
+
+        .bg-dark {
+            background-color: #343a40 !important;
+        }
+
+        .bg-light {
+            background-color: #f8f9fa !important;
+        }
+
+        form {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 2rem;
+            border-radius: 0.5rem;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Poppins&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container-fluid vh-100 d-flex">
+        <div class="row flex-grow-1">
+            <div class="col-md-6 bg-dark text-white d-flex align-items-center justify-content-center">
+                <form id="signup-form" class="w-75">
+                    <h2 class="text-center">Cadastro</h2>
+                    <div class="mb-3">
+                        <label for="signup-name" class="form-label">Nome</label>
+                        <input type="text" class="form-control" id="signup-name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="signup-email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="signup-email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="signup-password" class="form-label">Senha</label>
+                        <input type="password" class="form-control" id="signup-password" required>
+                    </div>
+                    <button type="submit" class="btn btn-light w-100">Cadastrar</button>
+                </form>
+            </div>
+            <div class="col-md-6 bg-light d-flex align-items-center justify-content-center">
+                <form id="login-form" class="w-75">
+                    <h2 class="text-center">Login</h2>
+                    <div class="mb-3">
+                        <label for="login-email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="login-email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="login-password" class="form-label">Senha</label>
+                        <input type="password" class="form-control" id="login-password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Entrar</button>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
