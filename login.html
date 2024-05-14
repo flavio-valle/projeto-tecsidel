@@ -5,9 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Tecsidel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <style>
-        html,
-        body {
+        html, body {
             height: 100%;
             margin: 0;
             font-family: 'Poppins', sans-serif;
@@ -25,10 +29,16 @@
             background-color: #f8f9fa !important;
         }
 
-        form {
-            background-color: rgba(255, 255, 255, 0.8);
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.9);
             padding: 2rem;
             border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .input-group-text svg, .input-group-text img {
+            width: 1rem;
+            height: 1rem;
         }
 
         .login-options {
@@ -60,25 +70,22 @@
             width: 1rem;
             height: 1rem;
         }
+
+        .fundo-cadastro {
+            background: url(assets/fundo-cadastro.png), no-repeat;
+            background-size: cover;
+            background-position: center;
+            opacity: 2;
+        }
     </style>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Poppins&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <div class="container-fluid vh-100 d-flex">
         <div class="row flex-grow-1">
-            <div class="col-md-6 bg-dark text-white d-flex align-items-center justify-content-center">
+            <div class="fundo-cadastro col-md-6 d-flex align-items-center justify-content-center">
                 <form id="signup-form" class="w-75">
-                    <h2 class="text-center">Cadastro</h2>
+                    <h2 class="text-center mb-4">Cadastro</h2>
                     <div class="mb-3">
                         <label for="signup-name" class="form-label">Nome</label>
                         <input type="text" class="form-control" id="signup-name" required>
@@ -111,7 +118,7 @@
                 <div class="d-flex flex-column align-items-center w-75">
                     <img src="assets/Logo-Tecsidel.png" alt="Logo da Tecsidel" class="mb-3 img-fluid">
                     <h3 class="text-center my-5">Seja Bem Vindo!</h3>
-                    <form id="login-form" class="w-100">
+                    <form id="login-form" class="form-container w-100">
                         <div class="mb-3">
                             <label for="login-email" class="form-label">E-mail</label>
                             <div class="input-group">
@@ -161,7 +168,6 @@
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <script src="js/script.js"></script>
 </body>
 
 </html>
