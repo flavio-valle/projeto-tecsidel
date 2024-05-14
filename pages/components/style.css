@@ -14,9 +14,6 @@ aside {
     transition: width 0.3s; 
 }
 
-aside:hover {
-    width: 240px; 
-}
 
 aside header {
     display: flex;
@@ -59,6 +56,32 @@ aside button > span {
     font-style: normal;
 }
 
+footer button {
+    height: 60px;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    text-align: left;
+    padding: 0;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    margin-bottom: 25px; 
+    
+    color: rgba(0, 66, 90, 1); 
+}
+
+footer button > span {
+    display: flex; 
+    align-items: center;
+    gap: 15px;
+    height: 48px;
+    padding: 0 16px 0 12px;
+    transition: all 0.3s;
+    font-size: 16px;
+    font-style: normal;
+}
+
 aside button:hover > span,
 aside button:focus-within > span {
     background-color: rgba(0, 66, 90, 0.25);
@@ -78,7 +101,12 @@ aside > nav{
     flex-direction: column;
     width: 100%;
 }
-
+aside > footer{
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
 @media (min-width: 481px) and (max-width: 768px) {
     aside {
         width: 60px; 
@@ -91,9 +119,12 @@ aside > nav{
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 480px){
     aside {
         width: 30px; 
         overflow: hidden; 
+    }
+    aside:hover {
+        width: 240px; 
     }
 }
