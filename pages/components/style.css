@@ -1,0 +1,82 @@
+aside {
+    margin: 0;
+    
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    width: 30px; 
+    height: 100%;
+    padding: 40px 10px 30px 10px;
+    border-right: none;
+    overflow: hidden; 
+    transition: width 0.3s; 
+}
+
+aside:hover {
+    width: 240px; 
+}
+
+aside header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+aside header img {
+    width: 100%; 
+    max-width: 180px; 
+    height: auto; 
+    margin-bottom: 30px; 
+}
+
+aside button {
+    height: 60px;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    text-align: left;
+    padding: 0;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    margin-bottom: 25px; 
+    /* font-family: ;  */
+    color: rgba(0, 66, 90, 1); 
+}
+
+aside button > span {
+    display: flex; 
+    align-items: center;
+    gap: 15px;
+    height: 48px;
+    padding: 0 16px 0 12px;
+    transition: all 0.3s;
+    font-size: 16px;
+    font-style: normal;
+}
+
+aside button:hover > span,
+aside button:focus-within > span {
+    background-color: rgba(0, 66, 90, 0.25);
+}
+
+aside button i{
+    position: relative;
+    font-size: 16px;
+    transition: 0.2s;
+    /*font-family: ; */
+    color: rgba(0, 66, 90, 1); 
+}
+
+aside > nav{
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
