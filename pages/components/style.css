@@ -1,6 +1,5 @@
 aside {
     margin: 0;
-    
     background-color: rgb(255, 255, 255);
     position: fixed;
     top: 0;
@@ -12,7 +11,6 @@ aside {
     height: 100%;
     padding: 40px 10px 30px 10px;
     border-right: none;
-    overflow: hidden; 
     transition: width 0.3s; 
 }
 
@@ -46,7 +44,7 @@ aside button {
     flex-direction: column; 
     justify-content: center; 
     margin-bottom: 25px; 
-    /* font-family: ;  */
+    
     color: rgba(0, 66, 90, 1); 
 }
 
@@ -70,7 +68,7 @@ aside button i{
     position: relative;
     font-size: 16px;
     transition: 0.2s;
-    /*font-family: ; */
+   
     color: rgba(0, 66, 90, 1); 
 }
 
@@ -79,4 +77,23 @@ aside > nav{
     display: flex;
     flex-direction: column;
     width: 100%;
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    aside {
+        width: 60px; 
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    aside {
+        width: 120px; 
+    }
+}
+
+@media (max-width: 480px) {
+    aside {
+        width: 30px; 
+        overflow: hidden; 
+    }
 }
