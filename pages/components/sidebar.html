@@ -12,7 +12,11 @@
 <body>
     <aside class="aside">
         <header>
-            <img src="img/tecsidel.png" >
+            <picture>
+                <source srcset="img/Logo-Tecsidel.png" media="(max-width: 500px)">
+                <source srcset="img/Logo-Tecsidel.png" media="(min-width: 400px)">
+                <img src="img/Logo-Tecsidel.png" alt="logo padrao" style="width: 250px;">
+            </picture>
         </header>
 
         <nav>
@@ -31,9 +35,9 @@
             </button>
 
             <button>
-                <span>
+                <span> 
                     <i class="bi bi-file-earmark-text-fill"></i>
-                    <span>Gerenciamento de Equipamento</span>
+                    <span id="Gerenciamento">Gerenciamento de Equipamento</span>
                 </span>
             </button>
 
