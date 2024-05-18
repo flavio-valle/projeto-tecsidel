@@ -10,80 +10,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <style>
-        html, body {
-            height: 100%;
-            margin: 0;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        .container-fluid {
-            padding: 0;
-        }
-
-        .bg-dark {
-            background-color: #343a40 !important;
-        }
-
-        .bg-light {
-            background-color: #f8f9fa !important;
-        }
-
-        .form-container {
-            background-color: rgba(255, 255, 255, 0.9);
-            padding: 2rem;
-            border-radius: 0.5rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .input-group-text svg, .input-group-text img {
-            width: 1rem;
-            height: 1rem;
-        }
-
-        .login-options {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 1rem;
-        }
-
-        .login-options button {
-            border: 1px solid #ccc;
-            border-radius: 25px;
-            padding: 0.5rem 2rem;
-            width: 45%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .login-options svg {
-            margin-right: 0.5rem;
-        }
-
-        .login-footer {
-            text-align: center;
-            margin-top: 1rem;
-        }
-
-        .input-group-text svg {
-            width: 1rem;
-            height: 1rem;
-        }
-
-        .fundo-cadastro {
-            background: url(assets/fundo-cadastro.png), no-repeat;
-            background-size: cover;
-            background-position: center;
-            opacity: 2;
-        }
-    </style>
+    <link rel="stylesheet" href="css/login.css">
 </head>
-
 <body>
     <div class="container-fluid vh-100 d-flex">
         <div class="row flex-grow-1">
-            <div class="fundo-cadastro col-md-6 d-flex align-items-center justify-content-center">
+            <div class="fundo-cadastro bg-light col-md-6 d-flex align-items-center justify-content-center">
                 <form id="signup-form" class="w-75">
                     <h2 class="text-center mb-4">Cadastro</h2>
                     <div class="mb-3">
@@ -94,15 +26,7 @@
                         <label for="signup-email" class="form-label">Email</label>
                         <div class="input-group">
                             <div class="input-group-text">
-                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 172 172" style=" fill:#26e07f;">
-                                    <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
-                                        <path d="M0,172v-172h172v172z" fill="none"></path>
-                                        <g fill="#1fb141">
-                                            <path d="M21.5,21.5v129h64.5v-32.25v-64.5v-32.25zM86,53.75c0,17.7805 14.4695,32.25 32.25,32.25c17.7805,0 32.25,-14.4695 32.25,-32.25c0,-17.7805 -14.4695,-32.25 -32.25,-32.25c-17.7805,0 -32.25,14.4695 -32.25,32.25zM118.25,86c-17.7805,0 -32.25,14.4695 -32.25,32.25c0,17.7805 14.4695,32.25 32.25,32.25c17.7805,0 32.25,-14.4695 32.25,-32.25c0,-17.7805 -14.4695,-32.25 -32.25,-32.25z">
-                                            </path>
-                                        </g>
-                                    </g>
-                                </svg>
+                                <img src="assets/Icons/email-icon.svg" alt="">
                             </div>
                             <input type="email" class="form-control" id="signup-email" required>
                         </div>
@@ -114,59 +38,53 @@
                     <button type="submit" class="btn btn-light w-100">Cadastrar</button>
                 </form>
             </div>
-            <div class="col-md-6 bg-light d-flex align-items-center justify-content-center">
-                <div class="d-flex flex-column align-items-center w-75">
-                    <img src="assets/Logo-Tecsidel.png" alt="Logo da Tecsidel" class="mb-3 img-fluid">
-                    <h3 class="text-center my-5">Seja Bem Vindo!</h3>
-                    <form id="login-form" class="form-container w-100">
-                        <div class="mb-3">
-                            <label for="login-email" class="form-label">E-mail</label>
-                            <div class="input-group">
-                                <div class="input-group-text">
-                                    <img src="assets/Icons/email-icon.svg" alt="" width="24" height="24">
-                                </div>
-                                <input type="email" class="form-control" id="login-email" required>
+            <div class="col-md-6 bg-light d-flex flex-column align-items-center justify-content-center">
+                <img src="assets/Logo-Tecsidel.png" alt="Logo da Tecsidel" class="mb-3 img-fluid logo-centered">
+                <h3 class="text-center my-5">Seja Bem Vindo!</h3>
+                <form id="login-form" class="form-container w-100">
+                    <div class="mb-3">
+                        <label for="login-email" class="form-label">E-mail</label>
+                        <div class="input-group">
+                            <div class="input-group-text">
+                                <img src="assets/Icons/email-icon.svg" alt="" width="24" height="24">
                             </div>
+                            <input type="email" class="form-control" id="login-email" required>
                         </div>
-                        <div class="mb-3">
-                            <label for="login-password" class="form-label">Senha</label>
-                            <div class="input-group">
-                                <div class="input-group-text">
-                                    <img src="assets/Icons/PasswordIcon.svg" alt="" width="24" height="24">
-                                </div>
-                                <input type="password" class="form-control" id="login-password" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="login-password" class="form-label">Senha</label>
+                        <div class="input-group">
+                            <div class="input-group-text">
+                                <img src="assets/Icons/PasswordIcon.svg" alt="" width="24" height="24">
                             </div>
+                            <input type="password" class="form-control" id="login-password" required>
                         </div>
-                        <div class="mb-3 text-end">
-                            <a href="#" class="form-text">Esqueceu a Senha?</a>
-                        </div>
-                        <button type="submit" class="btn btn-primary w-100">Entrar</button>
-                    </form>
-                    <div>
-                        <p class="my-3">Ou entre com:</p>
                     </div>
-                    <div class="login-options">
-                        <button class="btn btn-outline-primary">
-                            <svg class="img-fluid" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40" viewBox="0 0 48 48">
-                                <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"></path><path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"></path><path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"></path><path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"></path>
-                            </svg>
-                            Google
-                        </button>
-                        <button class="btn btn-outline-danger">
-                            <svg class="img-fluid" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40" viewBox="0 0 48 48">
-                                <path fill="#e53935" d="M24 43L16 20 32 20z"></path><path fill="#ff7043" d="M24 43L42 20 32 20z"></path><path fill="#e53935" d="M37 5L42 20 32 20z"></path><path fill="#ffa726" d="M24 43L42 20 45 28z"></path><path fill="#ff7043" d="M24 43L6 20 16 20z"></path><path fill="#e53935" d="M11 5L6 20 16 20z"></path><path fill="#ffa726" d="M24 43L6 20 3 28z"></path>
-                            </svg>
-                            GitLab
-                        </button>
+                    <div class="mb-3 text-end">
+                        <a href="#" class="form-text">Esqueceu a Senha?</a>
                     </div>
-                    <div class="login-footer">
-                        <p>Não tem uma conta? <a href="#">Registre-se aqui</a></p>
-                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Entrar</button>
+                </form>
+                <div>
+                    <p class="my-3">Ou entre com:</p>
+                </div>
+                <div class="login-options">
+                    <button class="btn btn-outline-primary">
+                        <img src="assets/Icons/GoogleLoginIcon.svg" alt="">
+                        Google
+                    </button>
+                    <button class="btn btn-outline-danger">
+                        <img src="assets/Icons/GitlabIcon.svg" alt="gitlab logo">
+                        GitLab
+                    </button>
+                </div>
+                <div class="login-footer">
+                    <p>Não tem uma conta? <a id="toggle-form" href="#">Registre-se aqui</a></p>
                 </div>
             </div>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/login.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
 
