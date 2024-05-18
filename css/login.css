@@ -1,0 +1,89 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+.bg-dark {
+    background-color: #343a40 !important;
+}
+
+.bg-light {
+    background-color: #f8f9fa !important;
+}
+
+.form-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.input-group-text svg, .input-group-text img {
+    width: 1rem;
+    height: 1rem;
+}
+
+.login-options {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+}
+
+.login-options button {
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    padding: 0.5rem 2rem;
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-options svg {
+    margin-right: 0.5rem;
+}
+
+.login-footer {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.input-group-text svg {
+    width: 1rem;
+    height: 1rem;
+}
+
+.fundo-cadastro {
+    background: url(/assets/fundo-cadastro.png), no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 2;
+}
+
+.toggle-btn {
+    display: none;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .toggle-btn {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .fundo-cadastro, .bg-light {
+        display: none;
+    }
+}
+
+.logo-centered {
+    display: block;
+    margin: 0 auto;
+}
