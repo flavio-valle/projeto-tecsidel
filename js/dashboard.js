@@ -29,7 +29,6 @@ document.addEventListener('DOMContentLoaded', function() {
 		const cameraPicture = document.getElementById("side-camera");
 		cameraPicture.src= cameraData.picture;
   } else {
-		console.log('camera nao encontrada')
     alert('Camera não encontrada');
   }
 });
