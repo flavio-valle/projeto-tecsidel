@@ -1,129 +1,35 @@
-var readingAxesByPeriod = [
-	{ "Data Inicial": "09/05/2024 13:00", "Data Final": "09/05/2024 13:30", "2 Eixos": "130", "3 Eixos": "80", "4 Eixos": "42", "5 Eixos": "18", "6 Eixos": "3", "7 Eixos": "2", "8 Eixos": "1", "Total": "276" },
-	{ "Data Inicial": "09/05/2024 13:00", "Data Final": "09/05/2024 13:30", "2 Eixos": "130", "3 Eixos": "80", "4 Eixos": "42", "5 Eixos": "18", "6 Eixos": "3", "7 Eixos": "2", "8 Eixos": "1", "Total": "276" },
-	{ "Data Inicial": "09/05/2024 13:00", "Data Final": "09/05/2024 13:30", "2 Eixos": "130", "3 Eixos": "80", "4 Eixos": "42", "5 Eixos": "18", "6 Eixos": "3", "7 Eixos": "2", "8 Eixos": "1", "Total": "276" },
-	{ "Data Inicial": "09/05/2024 13:00", "Data Final": "09/05/2024 13:30", "2 Eixos": "130", "3 Eixos": "80", "4 Eixos": "42", "5 Eixos": "18", "6 Eixos": "3", "7 Eixos": "2", "8 Eixos": "1", "Total": "276" },
-	{ "Data Inicial": "09/05/2024 13:00", "Data Final": "09/05/2024 13:30", "2 Eixos": "130", "3 Eixos": "80", "4 Eixos": "42", "5 Eixos": "18", "6 Eixos": "3", "7 Eixos": "2", "8 Eixos": "1", "Total": "276" },
-	{ "Data Inicial": "09/05/2024 13:00", "Data Final": "09/05/2024 13:30", "2 Eixos": "130", "3 Eixos": "80", "4 Eixos": "42", "5 Eixos": "18", "6 Eixos": "3", "7 Eixos": "2", "8 Eixos": "1", "Total": "276" },
-	{ "Data Inicial": "09/05/2024 13:00", "Data Final": "09/05/2024 13:30", "2 Eixos": "130", "3 Eixos": "80", "4 Eixos": "42", "5 Eixos": "18", "6 Eixos": "3", "7 Eixos": "2", "8 Eixos": "1", "Total": "276" },
-	{ "Data Inicial": "09/05/2024 13:00", "Data Final": "09/05/2024 13:30", "2 Eixos": "130", "3 Eixos": "80", "4 Eixos": "42", "5 Eixos": "18", "6 Eixos": "3", "7 Eixos": "2", "8 Eixos": "1", "Total": "276" },
-	{ "Data Inicial": "09/05/2024 13:00", "Data Final": "09/05/2024 13:30", "2 Eixos": "130", "3 Eixos": "80", "4 Eixos": "42", "5 Eixos": "18", "6 Eixos": "3", "7 Eixos": "2", "8 Eixos": "1", "Total": "276" },
-	{ "Data Inicial": "09/05/2024 13:00", "Data Final": "09/05/2024 13:30", "2 Eixos": "130", "3 Eixos": "80", "4 Eixos": "42", "5 Eixos": "18", "6 Eixos": "3", "7 Eixos": "2", "8 Eixos": "1", "Total": "276" },
-	{ "Data Inicial": "09/05/2024 13:00", "Data Final": "09/05/2024 13:30", "2 Eixos": "130", "3 Eixos": "80", "4 Eixos": "42", "5 Eixos": "18", "6 Eixos": "3", "7 Eixos": "2", "8 Eixos": "1", "Total": "276" },
-	{ "Data Inicial": "09/05/2024 13:00", "Data Final": "09/05/2024 13:30", "2 Eixos": "130", "3 Eixos": "80", "4 Eixos": "42", "5 Eixos": "18", "6 Eixos": "3", "7 Eixos": "2", "8 Eixos": "1", "Total": "276" },
-	{ "Data Inicial": "09/05/2024 13:00", "Data Final": "09/05/2024 13:30", "2 Eixos": "130", "3 Eixos": "80", "4 Eixos": "42", "5 Eixos": "18", "6 Eixos": "3", "7 Eixos": "2", "8 Eixos": "1", "Total": "276" },
-	{ "Data Inicial": "09/05/2024 13:00", "Data Final": "09/05/2024 13:30", "2 Eixos": "130", "3 Eixos": "80", "4 Eixos": "42", "5 Eixos": "18", "6 Eixos": "3", "7 Eixos": "2", "8 Eixos": "1", "Total": "276" },
-	{ "Data Inicial": "09/05/2024 13:00", "Data Final": "09/05/2024 13:30", "2 Eixos": "130", "3 Eixos": "80", "4 Eixos": "42", "5 Eixos": "18", "6 Eixos": "3", "7 Eixos": "2", "8 Eixos": "1", "Total": "276" },
-	{ "Data Inicial": "09/05/2024 13:00", "Data Final": "09/05/2024 13:30", "2 Eixos": "130", "3 Eixos": "80", "4 Eixos": "42", "5 Eixos": "18", "6 Eixos": "3", "7 Eixos": "2", "8 Eixos": "1", "Total": "276" },
-	{ "Data Inicial": "09/05/2024 13:00", "Data Final": "09/05/2024 13:30", "2 Eixos": "130", "3 Eixos": "80", "4 Eixos": "42", "5 Eixos": "18", "6 Eixos": "3", "7 Eixos": "2", "8 Eixos": "1", "Total": "276" },
-	{ "Data Inicial": "09/05/2024 13:00", "Data Final": "09/05/2024 13:30", "2 Eixos": "130", "3 Eixos": "80", "4 Eixos": "42", "5 Eixos": "18", "6 Eixos": "3", "7 Eixos": "2", "8 Eixos": "1", "Total": "276" },
-	{ "Data Inicial": "09/05/2024 13:00", "Data Final": "09/05/2024 13:30", "2 Eixos": "130", "3 Eixos": "80", "4 Eixos": "42", "5 Eixos": "18", "6 Eixos": "3", "7 Eixos": "2", "8 Eixos": "1", "Total": "276" },
-	{ "Data Inicial": "09/05/2024 13:00", "Data Final": "09/05/2024 13:30", "2 Eixos": "130", "3 Eixos": "80", "4 Eixos": "42", "5 Eixos": "18", "6 Eixos": "3", "7 Eixos": "2", "8 Eixos": "1", "Total": "276" },
-	{ "Data Inicial": "09/05/2024 13:00", "Data Final": "09/05/2024 13:30", "2 Eixos": "130", "3 Eixos": "80", "4 Eixos": "42", "5 Eixos": "18", "6 Eixos": "3", "7 Eixos": "2", "8 Eixos": "1", "Total": "276" },
-	{ "Data Inicial": "09/05/2024 13:00", "Data Final": "09/05/2024 13:30", "2 Eixos": "130", "3 Eixos": "80", "4 Eixos": "42", "5 Eixos": "18", "6 Eixos": "3", "7 Eixos": "2", "8 Eixos": "1", "Total": "276" },
-	{ "Data Inicial": "09/05/2024 13:00", "Data Final": "09/05/2024 13:30", "2 Eixos": "130", "3 Eixos": "80", "4 Eixos": "42", "5 Eixos": "18", "6 Eixos": "3", "7 Eixos": "2", "8 Eixos": "1", "Total": "276" },
-	{ "Data Inicial": "09/05/2024 13:00", "Data Final": "09/05/2024 13:30", "2 Eixos": "130", "3 Eixos": "80", "4 Eixos": "42", "5 Eixos": "18", "6 Eixos": "3", "7 Eixos": "2", "8 Eixos": "1", "Total": "276" },
-	{ "Data Inicial": "09/05/2024 13:00", "Data Final": "09/05/2024 13:30", "2 Eixos": "130", "3 Eixos": "80", "4 Eixos": "42", "5 Eixos": "18", "6 Eixos": "3", "7 Eixos": "2", "8 Eixos": "1", "Total": "276" },
-	{ "Data Inicial": "09/05/2024 13:00", "Data Final": "09/05/2024 13:30", "2 Eixos": "130", "3 Eixos": "80", "4 Eixos": "42", "5 Eixos": "18", "6 Eixos": "3", "7 Eixos": "2", "8 Eixos": "1", "Total": "276" },
-	{ "Data Inicial": "09/05/2024 13:00", "Data Final": "09/05/2024 13:30", "2 Eixos": "130", "3 Eixos": "80", "4 Eixos": "42", "5 Eixos": "18", "6 Eixos": "3", "7 Eixos": "2", "8 Eixos": "1", "Total": "276" },
-	{ "Data Inicial": "09/05/2024 13:00", "Data Final": "09/05/2024 13:30", "2 Eixos": "130", "3 Eixos": "80", "4 Eixos": "42", "5 Eixos": "18", "6 Eixos": "3", "7 Eixos": "2", "8 Eixos": "1", "Total": "276" },
-	{ "Data Inicial": "09/05/2024 13:00", "Data Final": "09/05/2024 13:30", "2 Eixos": "130", "3 Eixos": "80", "4 Eixos": "42", "5 Eixos": "18", "6 Eixos": "3", "7 Eixos": "2", "8 Eixos": "1", "Total": "276" },
-	{ "Data Inicial": "09/05/2024 13:00", "Data Final": "09/05/2024 13:30", "2 Eixos": "130", "3 Eixos": "80", "4 Eixos": "42", "5 Eixos": "18", "6 Eixos": "3", "7 Eixos": "2", "8 Eixos": "1", "Total": "276" },
-	{ "Data Inicial": "09/05/2024 13:00", "Data Final": "09/05/2024 13:30", "2 Eixos": "130", "3 Eixos": "80", "4 Eixos": "42", "5 Eixos": "18", "6 Eixos": "3", "7 Eixos": "2", "8 Eixos": "1", "Total": "276" },
-];
+document.addEventListener('DOMContentLoaded', function() {
 
-var paymentStatusPerReadingData = [
-	{"Data":"09/05/2024 13:06","Placa":"ABC1C34","TagID":"8763456","Atrasado":"SIM","Pago":"NÃO","Total":2.5},
-	{"Data":"09/05/2024 13:06","Placa":"ABC1C34","TagID":"8763456","Atrasado":"SIM","Pago":"NÃO","Total":2.5},
-	{"Data":"09/05/2024 13:06","Placa":"ABC1C34","TagID":"8763456","Atrasado":"SIM","Pago":"NÃO","Total":2.5},
-	{"Data":"09/05/2024 13:06","Placa":"ABC1C34","TagID":"8763456","Atrasado":"SIM","Pago":"NÃO","Total":2.5},
-	{"Data":"09/05/2024 13:06","Placa":"ABC1C34","TagID":"8763456","Atrasado":"SIM","Pago":"NÃO","Total":2.5},
-	{"Data":"09/05/2024 13:06","Placa":"ABC1C34","TagID":"8763456","Atrasado":"SIM","Pago":"NÃO","Total":2.5},
-	{"Data":"09/05/2024 13:06","Placa":"ABC1C34","TagID":"8763456","Atrasado":"SIM","Pago":"NÃO","Total":2.5},
-	{"Data":"09/05/2024 13:06","Placa":"ABC1C34","TagID":"8763456","Atrasado":"SIM","Pago":"NÃO","Total":2.5},
-	{"Data":"09/05/2024 13:06","Placa":"ABC1C34","TagID":"8763456","Atrasado":"SIM","Pago":"NÃO","Total":2.5},
-	{"Data":"09/05/2024 13:06","Placa":"ABC1C34","TagID":"8763456","Atrasado":"SIM","Pago":"NÃO","Total":2.5},
-	{"Data":"09/05/2024 13:06","Placa":"ABC1C34","TagID":"8763456","Atrasado":"SIM","Pago":"NÃO","Total":2.5},
-	{"Data":"09/05/2024 13:06","Placa":"ABC1C34","TagID":"8763456","Atrasado":"SIM","Pago":"NÃO","Total":2.5},
-	{"Data":"09/05/2024 13:06","Placa":"ABC1C34","TagID":"8763456","Atrasado":"SIM","Pago":"NÃO","Total":2.5},
-	{"Data":"09/05/2024 13:06","Placa":"ABC1C34","TagID":"8763456","Atrasado":"SIM","Pago":"NÃO","Total":2.5},
-	{"Data":"09/05/2024 13:06","Placa":"ABC1C34","TagID":"8763456","Atrasado":"SIM","Pago":"NÃO","Total":2.5},
-	{"Data":"09/05/2024 13:06","Placa":"ABC1C34","TagID":"8763456","Atrasado":"SIM","Pago":"NÃO","Total":2.5},
-	{"Data":"09/05/2024 13:06","Placa":"ABC1C34","TagID":"8763456","Atrasado":"SIM","Pago":"NÃO","Total":2.5},
-	{"Data":"09/05/2024 13:06","Placa":"ABC1C34","TagID":"8763456","Atrasado":"SIM","Pago":"NÃO","Total":2.5},
-	{"Data":"09/05/2024 13:06","Placa":"ABC1C34","TagID":"8763456","Atrasado":"SIM","Pago":"NÃO","Total":2.5},
-	{"Data":"09/05/2024 13:06","Placa":"ABC1C34","TagID":"8763456","Atrasado":"SIM","Pago":"NÃO","Total":2.5},
-	{"Data":"09/05/2024 13:06","Placa":"ABC1C34","TagID":"8763456","Atrasado":"SIM","Pago":"NÃO","Total":2.5},
-	{"Data":"09/05/2024 13:06","Placa":"ABC1C34","TagID":"8763456","Atrasado":"SIM","Pago":"NÃO","Total":2.5},
-	{"Data":"09/05/2024 13:06","Placa":"ABC1C34","TagID":"8763456","Atrasado":"SIM","Pago":"NÃO","Total":2.5},
-	{"Data":"09/05/2024 13:06","Placa":"ABC1C34","TagID":"8763456","Atrasado":"SIM","Pago":"NÃO","Total":2.5},
-	{"Data":"09/05/2024 13:06","Placa":"ABC1C34","TagID":"8763456","Atrasado":"SIM","Pago":"NÃO","Total":2.5},
-	{"Data":"09/05/2024 13:06","Placa":"ABC1C34","TagID":"8763456","Atrasado":"SIM","Pago":"NÃO","Total":2.5},
-	{"Data":"09/05/2024 13:06","Placa":"ABC1C34","TagID":"8763456","Atrasado":"SIM","Pago":"NÃO","Total":2.5},
-	{"Data":"09/05/2024 13:06","Placa":"ABC1C34","TagID":"8763456","Atrasado":"SIM","Pago":"NÃO","Total":2.5},
-	{"Data":"09/05/2024 13:06","Placa":"ABC1C34","TagID":"8763456","Atrasado":"SIM","Pago":"NÃO","Total":2.5},
-	{"Data":"09/05/2024 13:06","Placa":"ABC1C34","TagID":"8763456","Atrasado":"SIM","Pago":"NÃO","Total":2.5},
-]
+  const urlParams = new URLSearchParams(window.location.search);
+  const cameraId = urlParams.get('camera');
 
-var cameraStatusData = [
-	{"Data Inicial":"09/05/2024 13:06","Data Final":"09/05/2024 13:06","Ativo":"SIM"},
-	{"Data Inicial":"09/05/2024 13:06","Data Final":"09/05/2024 13:06","Ativo":"SIM"},
-	{"Data Inicial":"09/05/2024 13:06","Data Final":"09/05/2024 13:06","Ativo":"SIM"},
-	{"Data Inicial":"09/05/2024 13:06","Data Final":"09/05/2024 13:06","Ativo":"SIM"},
-	{"Data Inicial":"09/05/2024 13:06","Data Final":"09/05/2024 13:06","Ativo":"SIM"},
-	{"Data Inicial":"09/05/2024 13:06","Data Final":"09/05/2024 13:06","Ativo":"SIM"},
-	{"Data Inicial":"09/05/2024 13:06","Data Final":"09/05/2024 13:06","Ativo":"SIM"},
-	{"Data Inicial":"09/05/2024 13:06","Data Final":"09/05/2024 13:06","Ativo":"SIM"},
-	{"Data Inicial":"09/05/2024 13:06","Data Final":"09/05/2024 13:06","Ativo":"SIM"},
-	{"Data Inicial":"09/05/2024 13:06","Data Final":"09/05/2024 13:06","Ativo":"SIM"},
-	{"Data Inicial":"09/05/2024 13:06","Data Final":"09/05/2024 13:06","Ativo":"SIM"},
-	{"Data Inicial":"09/05/2024 13:06","Data Final":"09/05/2024 13:06","Ativo":"SIM"},
-	{"Data Inicial":"09/05/2024 13:06","Data Final":"09/05/2024 13:06","Ativo":"SIM"},
-	{"Data Inicial":"09/05/2024 13:06","Data Final":"09/05/2024 13:06","Ativo":"SIM"},
-	{"Data Inicial":"09/05/2024 13:06","Data Final":"09/05/2024 13:06","Ativo":"SIM"},
-	{"Data Inicial":"09/05/2024 13:06","Data Final":"09/05/2024 13:06","Ativo":"SIM"},
-	{"Data Inicial":"09/05/2024 13:06","Data Final":"09/05/2024 13:06","Ativo":"SIM"},
-	{"Data Inicial":"09/05/2024 13:06","Data Final":"09/05/2024 13:06","Ativo":"SIM"},
-	{"Data Inicial":"09/05/2024 13:06","Data Final":"09/05/2024 13:06","Ativo":"SIM"},
-	{"Data Inicial":"09/05/2024 13:06","Data Final":"09/05/2024 13:06","Ativo":"SIM"},
-	{"Data Inicial":"09/05/2024 13:06","Data Final":"09/05/2024 13:06","Ativo":"SIM"},
-	{"Data Inicial":"09/05/2024 13:06","Data Final":"09/05/2024 13:06","Ativo":"SIM"},
-	{"Data Inicial":"09/05/2024 13:06","Data Final":"09/05/2024 13:06","Ativo":"SIM"},
-	{"Data Inicial":"09/05/2024 13:06","Data Final":"09/05/2024 13:06","Ativo":"SIM"},
-	{"Data Inicial":"09/05/2024 13:06","Data Final":"09/05/2024 13:06","Ativo":"SIM"},
-	{"Data Inicial":"09/05/2024 13:06","Data Final":"09/05/2024 13:06","Ativo":"SIM"},
-	{"Data Inicial":"09/05/2024 13:06","Data Final":"09/05/2024 13:06","Ativo":"SIM"},
-	{"Data Inicial":"09/05/2024 13:06","Data Final":"09/05/2024 13:06","Ativo":"SIM"},
-	{"Data Inicial":"09/05/2024 13:06","Data Final":"09/05/2024 13:06","Ativo":"SIM"},
-	{"Data Inicial":"09/05/2024 13:06","Data Final":"09/05/2024 13:06","Ativo":"SIM"},
-	{"Data Inicial":"09/05/2024 13:06","Data Final":"09/05/2024 13:06","Ativo":"SIM"},
-	{"Data Inicial":"09/05/2024 13:06","Data Final":"09/05/2024 13:06","Ativo":"SIM"},
-	{"Data Inicial":"09/05/2024 13:06","Data Final":"09/05/2024 13:06","Ativo":"SIM"},
-]
+  function fillTable(tableBodyId, data) {
+    const tbody = document.querySelector('#' + tableBodyId + ' tbody');
+    tbody.innerHTML = '';
+    data.forEach(function(item) {
+      var row = document.createElement('tr');
+      Object.keys(item).forEach(function(key) {
+        var cell = document.createElement('td');
+        cell.textContent = item[key];
+        row.appendChild(cell);
+      });
+      tbody.appendChild(row);
+    });
+  }
 
-const dataPerTableBodyId = {
-	'table-read-axes-period':readingAxesByPeriod,
-	'payment-status-per-reading':paymentStatusPerReadingData,
-	'camera-status':cameraStatusData,
-}
+  if (camerasData[cameraId]) {
+		const cameraData = camerasData[cameraId]
+    fillTable('camera-status', cameraData.status);
+    fillTable('table-read-axes-period', cameraData.vehicles);
+    fillTable('payment-status-per-reading', cameraData.payments);
 
-function fillTable(tableBodyId) {
-	const tbody = document.querySelector('#'+tableBodyId+' tbody');
-	tbody.innerHTML = '';
 
-	dataPerTableBodyId[tableBodyId].forEach(function(item) {
-			var row = document.createElement('tr');
-
-			Object.keys(item).forEach(function(key) {
-					var cell = document.createElement('td');
-					cell.textContent = item[key];
-					row.appendChild(cell);
-			});
-
-			tbody.appendChild(row);
-	});
-}
-
-fillTable('table-read-axes-period');
-fillTable('payment-status-per-reading');
-fillTable('camera-status');
+		const camerasNames = document.getElementById("camera-name");
+		camerasNames.textContent = cameraData.name
+		const cameraPicture = document.getElementById("side-camera");
+		cameraPicture.src= cameraData.picture;
+  } else {
+		console.log('camera nao encontrada')
+    alert('Camera não encontrada');
+  }
+});
