@@ -1,30 +1,40 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const toggleButton = document.getElementById('toggle-form');
-    const signupForm = document.getElementById('signup-form');
-    const loginForm = document.getElementById('login-form');
+document.addEventListener('DOMContentLoaded', () => {
+    const signupNameModal = document.getElementById('signup-name-modal');
+    const signupEmailModal = document.getElementById('signup-email-modal');
+    const signupPasswordModal = document.getElementById('signup-password-modal');
+    const signupSubmitButton = document.getElementById('signupSubmit');
+    const loginEmail = document.getElementById('login-email');
+    const loginPassword = document.getElementById('login-password');
+    const loginSubmit = document.getElementById('login-submit');
 
-    function updateForms() {
-        if (window.innerWidth <= 768) {
-            loginForm.style.display = 'block';
-            signupForm.style.display = 'none';
-            toggleButton.textContent = 'Cadastrar';
-            toggleButton.onclick = function() {
-                if (signupForm.style.display === 'none') {
-                    signupForm.style.display = 'block';
-                    loginForm.style.display = 'none';
-                    toggleButton.textContent = 'Entrar';
-                } else {
-                    signupForm.style.display = 'none';
-                    loginForm.style.display = 'block';
-                    toggleButton.textContent = 'Cadastrar';
-                }
-            };
-        } else {
-            loginForm.style.display = 'block';
-            signupForm.style.display = 'block';
-        }
+    function checkFields() {
+        signupSubmitButton.disabled = !(signupNameModal.value && signupEmailModal.value && signupPasswordModal.value);
     }
 
-    updateForms();
-    window.addEventListener('resize', updateForms);
+    function clearFields() {
+        signupNameModal.value = '';
+        signupEmailModal.value = '';
+        signupPasswordModal.value = '';
+    }
+
+    function checkLoginFields() {
+        loginSubmit.disabled = !(loginEmail.value && loginPassword.value);
+    }
+
+    signupNameModal.addEventListener('input', checkFields);
+    signupEmailModal.addEventListener('input', checkFields);
+    signupPasswordModal.addEventListener('input', checkFields);
+
+    loginEmail.addEventListener('input', checkLoginFields);
+    loginPassword.addEventListener('input', checkLoginFields);
+
+    signupSubmitButton.addEventListener('click', () => {
+        if (signupNameModal.value && signupEmailModal.value && signupPasswordModal.value) {
+            alert('Usuário cadastrado com sucesso!');
+            clearFields();
+        }
+    });
+
+    checkFields();
+    checkLoginFields();
 });
