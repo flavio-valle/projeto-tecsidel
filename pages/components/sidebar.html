@@ -1,83 +1,70 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=,, initial-scale=1.0">
-    <title>sidebar</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="style.css" />
-</head>
+<aside class="aside">
+    <header>
+        <img src="/assets/Logo-Tecsidel.png" alt="logo padrão" class="logo expanded-logo img-fluid">
+        <img src="/assets/Logotipo-Eysa-sinclaim.png" alt="logo colapsado" class="logo collapsed-logo img-fluid">
+    </header>
 
+    <nav>
+        <button>
+            <span>
+                <i class="bi bi-house-door-fill"></i>
+                <span class="text">Dashboard</span>
+            </span>
+        </button>
 
-<body>
-    <aside class="aside">
-        <header>
-            <picture>
-                <source srcset="/assets/Logo-Tecsidel.png" media="(max-width: 500px)">
-                <source srcset="/assets/Logo-Tecsidel.png" media="(min-width: 400px)">
-                <img src="/assets/Logotipo-Eysa-sinclaim.png" alt="logo padrao" style="width: 250px;">
-            </picture>
-        </header>
+        <button>
+            <span>
+                <i class="bi bi-car-front-fill"></i>
+                <span class="text">Tráfego</span>
+            </span>
+        </button>
 
-        <nav>
-            <button>
-                <span>
-                    <i class="bi bi-house-door-fill"></i>
-                    <span>Dashboard</span>
-                </span>
-            </button>
+        <button>
+            <span>
+                <i class="bi bi-file-earmark-text-fill"></i>
+                <span class="text" id="Gerenciamento">Gerenc. de Equip.</span>
+            </span>
+        </button>
 
-            <button>
-                <span>
-                    <i class="bi bi-car-front-fill"></i>
-                    <span>Tráfego</span>
-                </span>
-            </button>
+        <button>
+            <span>
+                <i class="bi bi-graph-up"></i>
+                <span class="text">Estatísticas</span>
+            </span>
+        </button>
 
-            <button>
-                <span> 
-                    <i class="bi bi-file-earmark-text-fill"></i>
-                    <span id="Gerenciamento">Gerenciamento de Equipamento</span>
-                </span>
-            </button>
+        <button>
+            <span>
+                <i class="bi bi-camera-reels-fill"></i>
+                <span class="text">Câmeras</span>
+            </span>
+        </button>
 
-            <button> 
-                <span>
-                    <i class="bi bi-graph-up"></i>
-                    <span>Estatísticas</span>
-                </span>
-            </button>
+        <button>
+            <span>
+                <i class="bi bi-gear-fill"></i>
+                <span class="text">Configurações</span>
+            </span>
+        </button>
+    </nav>
 
-            <button>
-                <span>
-                    <i class="bi bi-camera-reels-fill"></i>
-                    <span>Câmeras</span>
-                </span>
-            </button>
+    <footer>
+        <button>
 
-            <button>
-                <span>
-                    <i class="bi bi-gear-fill"></i>
-                    <span>Configurações</span>
-                </span>
-            </button>
-
-        </nav>
-
-        <footer>
-            <button>
-                <span>
-                    <i class="bi bi-box-arrow-right"></i>
-                    <span>Sair</span>
-                </span>
-            </button>
-
-        </footer>
-
-    </aside>
-
-
-    
-
-</body>
-</html>
+            <div class="dark-mode-toggle">
+                <span><i class="bi bi-moon"></i></span>
+                <span class="text">Dark mode</span>
+                <label class="switch">
+                    <input type="checkbox" id="dark-mode-toggle">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </button>
+        <button>
+            <span>
+                <i class="bi bi-box-arrow-right"></i>
+                <span class="text">Sair</span>
+            </span>
+        </button>
+    </footer>
+</aside>

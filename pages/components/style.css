@@ -1,22 +1,25 @@
 aside {
     margin: 0;
-    background-color: rgb(255, 255, 255);
+    background-color: #fff;
     position: fixed;
     top: 0;
     display: flex;
     flex-direction: column;
     align-items: center; 
-    justify-content: center; 
-    width: 30px; 
+    justify-content: space-between;
+    width: 80px;
     height: 100%;
-    padding: 40px 10px 30px 10px;
-    border-right: none;
-    transition: width 0.3s; 
+    padding: 20px 10px;
+    border-right: 1px solid #ccc;
+    transition: width 0.3s;
 }
 
+aside:hover {
+    width: 250px;
+}
 
 aside header {
-    width: 200%;
+    width: 100%;
     height: auto;
     display: flex;
     align-items: center;
@@ -24,18 +27,34 @@ aside header {
     margin-bottom: 25px;
 }
 
-aside header picture {
-    max-width: 50%;
+aside header .logo {
+    max-width: 100%;
     height: auto;
     object-fit: contain;
     object-position: center;
-    border-left: 100;
 }
 
+aside header .expanded-logo {
+    display: none;
+}
 
+aside:hover header .expanded-logo {
+    display: inline;
+}
 
+aside:hover header .collapsed-logo {
+    display: none;
+}
+
+aside nav, aside footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 aside button {
+    width: 100%;
     height: 60px;
     background: transparent;
     border: 0;
@@ -43,10 +62,8 @@ aside button {
     text-align: left;
     padding: 0;
     display: flex; 
-    flex-direction: column; 
-    justify-content: center; 
-    margin-bottom: 25px; 
-    
+    align-items: center; 
+    margin-bottom: 15px; 
     color: rgba(0, 66, 90, 1); 
 }
 
@@ -54,38 +71,11 @@ aside button > span {
     display: flex; 
     align-items: center;
     gap: 15px;
-    height: 48px;
-    padding: 6px 16px 6px 12px;
+    height: 100%;
+    padding: 6px 16px;
     transition: all 0.3s;
     font-size: 16px;
-    font-style: normal;
     border-radius: 10px;
-}
-
-footer button {
-    height: 60px;
-    background: transparent;
-    border: 0;
-    cursor: pointer;
-    text-align: left;
-    padding: 0;
-    display: flex; 
-    flex-direction: column; 
-    justify-content: center; 
-    margin-bottom: 25px; 
-    
-    color: rgba(0, 66, 90, 1); 
-}
-
-footer button > span {
-    display: flex; 
-    align-items: center;
-    gap: 15px;
-    height: 48px;
-    padding: 6px 16px 6px 12px;
-    transition: all 0.3s;
-    font-size: 16px;
-    font-style: normal;
 }
 
 aside button:hover > span,
@@ -93,61 +83,86 @@ aside button:focus-within > span {
     background-color: rgba(0, 66, 90, 0.25);
 }
 
-aside button i{
-    position: relative;
-    font-size: 16px;
-    transition: 0.2s;
-   
+aside button i {
+    font-size: 20px;
     color: rgba(0, 66, 90, 1); 
 }
 
-aside > nav{
-    flex: 1 1 auto;
+aside .dark-mode-toggle {
     display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-aside > footer{
-    flex: 1 1 auto;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-@media (min-width: 481px) and (max-width: 768px) {
-    aside {
-        width: 60px; 
-    }
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
-    aside {
-        width: 120px; 
-    }
+aside .dark-mode-toggle .switch {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 20px;
 }
 
-@media (max-width: 480px){
-    aside {
-        width: 30px; 
-        overflow: hidden; 
-    }
-    aside:hover {
-        width: 240px; 
-    }
-
+aside .dark-mode-toggle .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
 }
 
-aside button::after {
-    content: "";
-    position: fixed;
+aside .dark-mode-toggle .slider {
+    position: absolute;
+    cursor: pointer;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: transparent;
-    z-index: -1; 
-    pointer-events: none; 
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
 }
 
-aside button:focus-within::after {
-    background-color: rgba(255, 255, 255, 0.1); 
+aside .dark-mode-toggle .slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+aside .dark-mode-toggle input:checked + .slider {
+    background-color: #2196F3;
+}
+
+aside .dark-mode-toggle input:checked + .slider:before {
+    transform: translateX(14px);
+}
+
+aside:hover .text {
+    display: inline;
+}
+
+.text {
+    display: none;
+}
+
+@media (max-width: 480px) {
+    aside {
+        width: 50px;
+        overflow: hidden;
+    }
+
+    aside:hover {
+        width: 250px;
+    }
+
+    aside button > span .text {
+        display: none;
+    }
+
+    aside:hover button > span .text {
+        display: inline;
+    }
 }

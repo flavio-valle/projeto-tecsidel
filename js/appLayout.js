@@ -17,5 +17,10 @@ if(sidebar) {
     sidebarStyle.rel = 'stylesheet';
     sidebarStyle.href = '/pages/components/style.css';
     document.head.appendChild(sidebarStyle);
+    
+    let bootstrapIcons = document.createElement('link');
+    bootstrapIcons.rel = 'stylesheet';
+    bootstrapIcons.href = 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css';
+    document.head.appendChild(bootstrapIcons);
 
 }
