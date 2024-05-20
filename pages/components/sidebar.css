@@ -1,3 +1,7 @@
+a {
+    text-decoration: none;
+}
+
 aside {
     margin: 0;
     background-color: #fff;
@@ -12,6 +16,7 @@ aside {
     padding: 20px 10px;
     border-right: 1px solid #ccc;
     transition: width 0.3s;
+    z-index: 2;
 }
 
 aside:hover {
