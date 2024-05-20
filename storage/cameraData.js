@@ -75,7 +75,7 @@ var camerasData = {
 			{"Data":"03/04/2013 08:03","Placa":"987SD6","TagID":"2342345","Atrasado":"NÃO","Pago":"NÃO","Total":3.0},
 			{"Data":"03/04/2013 08:03","Placa":"987SD6","TagID":"2342345","Atrasado":"NÃO","Pago":"NÃO","Total":3.0},
 		],
-		picture: '../assets/camera1.jpg'
+		picture: '/assets/camera1.jpg'
 	},
 	2: {
 		name: "Camera 2",
@@ -148,7 +148,7 @@ var camerasData = {
 			{"Data":"09/05/2024 13:06","Placa":"ABC1C34","TagID":"8763456","Atrasado":"SIM","Pago":"NÃO","Total":2.5},
 			{"Data":"09/05/2024 13:06","Placa":"ABC1C34","TagID":"8763456","Atrasado":"SIM","Pago":"NÃO","Total":2.5},
 		],
-		picture: '../assets/camera2.jpg'
+		picture: '/assets/camera2.jpg'
 	},
 	3: {
 		name: "Camera 3",
@@ -210,7 +210,7 @@ var camerasData = {
 			{"Data":"09/05/2024 13:06","Placa":"ABC1C34","TagID":"8763456","Atrasado":"SIM","Pago":"NÃO","Total":2.5},
 			{"Data":"09/05/2024 13:06","Placa":"ABC1C34","TagID":"8763456","Atrasado":"SIM","Pago":"NÃO","Total":2.5},
 		],
-		picture: '../assets/camera3.jpg'
+		picture: '/assets/camera3.jpg'
 	},
 	4: {
 		name: "Camera 4",
@@ -325,7 +325,7 @@ var camerasData = {
 			{"Data":"09/05/2024 13:06","Placa":"ABC1C34","TagID":"8763456","Atrasado":"SIM","Pago":"NÃO","Total":2.5},
 			{"Data":"09/05/2024 13:06","Placa":"ABC1C34","TagID":"8763456","Atrasado":"SIM","Pago":"NÃO","Total":2.5},
 		],
-		picture: '../assets/camera4.jpg'
+		picture: '/assets/camera4.jpg'
 	},
 	5: {
 		name: "Camera 5",
@@ -440,6 +440,6 @@ var camerasData = {
 			{"Data":"09/05/2024 13:06","Placa":"ABC1C34","TagID":"8763456","Atrasado":"SIM","Pago":"NÃO","Total":2.5},
 			{"Data":"09/05/2024 13:06","Placa":"ABC1C34","TagID":"8763456","Atrasado":"SIM","Pago":"NÃO","Total":2.5},
 		],
-		picture: '../assets/The-camera-mounted-over-the-road-and-looking-at-the-incoming-traffic-a-the-view-from.png'
+		picture: '/assets/The-camera-mounted-over-the-road-and-looking-at-the-incoming-traffic-a-the-view-from.png'
 	},
 };
