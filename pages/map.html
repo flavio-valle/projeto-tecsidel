@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapeamento de Antenas</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/css/map.css">
+    <link rel="stylesheet" href="/css/style.css">
+    
+</head>
+<body>
+    <header>
+        <div id="sidebar"></div>
+    </header>
+    <div id="top-bar">
+        <div  class="overview"  id="ilus-home" style="margin-left: auto;">
+            <span>23 Operantes </span>
+            <span>2 Em Manutenção </span>
+            <span>2 Inoperantes</span>
+        </div>
+        <div class="overview" id="lyzil">
+            <span>Mapeamento de Antenas</span>
+        </div>
+    </div>
+    <div id="content">
+        <div id="map" style="z-index: 0;"></div>
+        <div id="toll-list-container">
+            <div id="search-bar">
+                <input type="text" placeholder="Buscar Antena (unidade, Localização)" />
+                <button><i class="bi bi-search"></i></button>
+            </div>
+            <div id="toll-list">
+                <h2>Manutenção em Andamento</h2>
+                <div class="toll active">
+                    <p><strong>Unidade Rodovia dos Imigrantes</strong></p>
+                    <button class="assign">Detalhes</button>
+                </div>
+                <div class="toll active">
+                    <p><strong>Unidade Anchieta</strong></p>                 
+                    <button class="assign">Detalhes</button>
+                </div>
+                <h2>Manutenção Pendente</h2>
+                <div class="toll inactive">
+                    <p><strong>Unidade Piaçaguera</strong></p>
+                    <button class="assign">Detalhes</button>
+                </div>
+                <div class="toll inactive">
+                    <p><strong>Unidade Cônego Domênico Rangoni</strong></p>
+                    <button class="assign">Detalhes</button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        var map = L.map('map').setView([-23.9675, -46.3854], 12); 
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+        }).addTo(map);
+
+        var locations = [
+            { lat: -23.9675, lon: -46.3854, label: '81' }, 
+            { lat: -24.0057, lon: -46.4024, label: '68' }, 
+            { lat: -23.9535, lon: -46.3349, label: '30' }, 
+        ];
+
+        locations.forEach(function(location) {
+            L.marker([location.lat, location.lon], {
+                icon: L.divIcon({
+                    className: 'marker-icon',
+                    html: location.label
+                })
+            }).addTo(map);
+        });
+    </script>
+    <script src="/js/appLayout.js"></script>
+</body>
+</html>

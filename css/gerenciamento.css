@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    margin: 20px auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.filters {
+    display: flex;
+    align-items: center;
+}
+
+.filters select,
+.filters input[type="text"],
+.filters input[type="date"] {
+    margin-right: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.filters .date-filters button {
+    margin-right: 5px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.filters .date-filters button:hover {
+    background-color: #0056b3;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+}
+
+.title h1 {
+    margin-right: 20px;
+}
+
+.title button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: #28a745;
+    color: #fff;
+    cursor: pointer;
+}
+
+.title button:hover {
+    background-color: #218838;
+}
+
+.event-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 16px;
+    text-align: left;
+    background-color: #fff;
+}
+
+.event-table thead tr {
+    background-color: #007bff;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+.event-table th,
+.event-table td {
+    padding: 12px 15px;
+}
+
+.event-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.event-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.event-table tbody tr:last-of-type {
+    border-bottom: 2px solid #007bff;
+}
+
+.event-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
