@@ -1,7 +1,7 @@
-console.log('index.js loaded');
+
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Tráfego
+
     var ctxTraffic = document.getElementById('trafficChart').getContext('2d');
     new Chart(ctxTraffic, {
         type: 'line',
@@ -24,7 +24,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Estatísticas de Veículos
     var ctxVehicleStats = document.getElementById('vehicleStatsChart').getContext('2d');
     new Chart(ctxVehicleStats, {
         type: 'bar',
@@ -60,7 +59,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Comparativo de Tráfego
     var ctxTrafficComparison = document.getElementById('trafficComparisonChart').getContext('2d');
     new Chart(ctxTrafficComparison, {
         type: 'line',
@@ -92,5 +90,4 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Câmeras Ativas
 });
