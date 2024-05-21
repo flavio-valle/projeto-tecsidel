@@ -37,14 +37,11 @@ O projeto envolve o desenvolvimento de um aplicativo móvel para monitoramento e
 - **Importante:** Esta é uma entrega obrigatória, e não serão aceitas submissões após o prazo.
 
 ## Integrantes da Equipe
-- [Seu Nome 1] - [Seu RM 1]
-- [Seu Nome 2] - [Seu RM 2]
-- [Seu Nome 3] - [Seu RM 3]
-- [Seu Nome 4] - [Seu RM 4]
-- [Seu Nome 5] - [Seu RM 5]
-
-## Informações de Contato
-Para quaisquer dúvidas ou informações adicionais, entre em contato conosco pelo email [seu endereço de email].
+- [GABRIELA PONGA DOS SANTOS] - [RM552813]
+- [KAIQUE OLIVEIRA DE SOUSA] - [RM553184]
+- [MAURICIO THIEME BARBOSA] - [RM554204]
+- [FLAVIO VALLE DA CUNHA] - [RM554222]
+- [FERNANDO JOSE MARTINS HEUSI] - [RM554065]
 
 ---
 
