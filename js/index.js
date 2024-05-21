@@ -93,32 +93,4 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Câmeras Ativas
-    var ctxActiveCameras = document.getElementById('activeCamerasChart').getContext('2d');
-    new Chart(ctxActiveCameras, {
-        type: 'scatter',
-        data: {
-            labels: ['Ativas', 'Inativas'],
-            datasets: [{
-                label: 'Câmeras',
-                data: [10, 2],
-                backgroundColor: [
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(255, 99, 132, 0.2)'
-                ],
-                borderColor: [
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(255, 99, 132, 1)'
-                ],
-                borderWidth: 1
-            }]
-        },
-        options: {
-            responsive: true,
-            plugins: {
-                legend: {
-                    position: 'top',
-                }
-            }
-        }
-    });
 });
