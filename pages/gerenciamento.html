@@ -14,9 +14,9 @@
     </header>
     <div class="container">
         <div class="header">
-
             <div class="title" style="display: flex; justify-content: space-between; width: 100%;">
                 <h3>Histórico de Monitoramento</h3>
+                <button onclick="downloadJSONAsCSV(gerenciamentoData)">Baixar Arquivo</button>
             </div>
         </div>
         <table class="event-table" id="gerenciamento-table">
@@ -36,9 +36,10 @@
             </tbody>
         </table>
     </div>
-</body>
 
-<script src="/js/appLayout.js"></script>
-<script src="/storage/gerenciamentoData.js"></script>
-<script src="/js/carregarGerenciamento.js"></script>
+    <script src="/js/appLayout.js"></script>
+    <script src="/storage/gerenciamentoData.js"></script>
+    <script src="/js/exportCSV.js"></script>
+    <script src="/js/carregarGerenciamento.js"></script>
+</body>
 </html>
