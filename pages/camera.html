@@ -23,55 +23,67 @@
 </head>
 
 <body>
-  <div id="nav-menu">
-    <img class="nav-menu-icon" src="../assets/Icons/icons8-cardápio.svg" alt="" onclick="handleNavMenu()">
-    <div class="nav-title">
-      <img src="../assets/TecsidelLogo.svg" />
-      <h1>Tecsidel</h1>
-    </div>
+  <header id="sidebar">
+  </header>
+  <div id="navbar"></div>
+    <div class="main-container" onclick="handleMainContainer()">
 
-  </div>
-
-  <div id="drawer-menu">
-    <div>
-      <div class="drawer-title">
-
-        <img src="../assets/TecsidelLogo.svg" />
-        <h1>Tecsidel</h1>
-      </div>
-
-      <div class="drawer-items">
-        <div class="drawer-button">
-          <img src="../assets/Icons/HomeIcon.svg" alt="">
-          <h3 class="drawer-item">Dashboard</h3>
+      <div class="side-by-side">
+        <div class="camera-container" id="side-camera-container">
+          <img class="camera" id="side-camera"
+            src="../assets/The-camera-mounted-over-the-road-and-looking-at-the-incoming-traffic-a-the-view-from.png"
+            alt="camera">
+          <h2 class="camera-name" id="camera-name">Camera 2</h2>
         </div>
 
-        <a href="../index.html">
-          <div class="drawer-button">
-            <img src="../assets/Icons/CameraIcon.svg" alt="">
-            <h3 class="drawer-item">Cameras</h3>
+        <!-- <div class="table-container" id="status-table-container"> -->
+        <div class="table-container">
+          <h2>
+            Status da Camera
+            <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                class="bi bi-box-arrow-up-right pb-1" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
+                <path fill-rule="evenodd"
+                  d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" />
+              </svg>
+            </button>
+          </h2>
+          <table id="camera-status">
+            <thead>
+              <tr>
+                <th>Data Inicial</th>
+                <th>Data Final</th>
+                <th>Ativo</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!-- modal - status da camera -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Status da Camera 2</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <img class="img-fluid" src="/assets/grafico.jpg" alt="Grafico Câmera">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fechar</button>
+            </div>
           </div>
-        </a>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="main-container" onclick="handleMainContainer()">
-
-    <div class="side-by-side">
-      <div class="camera-container" id="side-camera-container">
-        <img class="camera" id="side-camera"
-          src="../assets/The-camera-mounted-over-the-road-and-looking-at-the-incoming-traffic-a-the-view-from.png"
-          alt="camera">
-        <h2 class="camera-name" id="camera-name">Camera 2</h2>
+        </div>
       </div>
 
-      <!-- <div class="table-container" id="status-table-container"> -->
       <div class="table-container">
-        <h2>
-          Status da Camera
-          <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <h2>Veículos por Período
+          <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
               class="bi bi-box-arrow-up-right pb-1" viewBox="0 0 16 16">
               <path fill-rule="evenodd"
@@ -81,138 +93,98 @@
             </svg>
           </button>
         </h2>
-        <table id="camera-status">
+        <table id="table-read-axes-period">
           <thead>
             <tr>
               <th>Data Inicial</th>
               <th>Data Final</th>
-              <th>Ativo</th>
+              <th>2 Eixos</th>
+              <th>3 Eixos</th>
+              <th>4 Eixos</th>
+              <th>5 Eixos</th>
+              <th>6 Eixos</th>
+              <th>7 Eixos</th>
+              <th>8 Eixos</th>
+              <th>Total</th>
             </tr>
           </thead>
           <tbody>
           </tbody>
         </table>
       </div>
-    </div>
-    <!-- modal - status da camera -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Status da Camera 2</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <img class="img-fluid" src="/assets/grafico.jpg" alt="Grafico Câmera">
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fechar</button>
+
+      <!-- modal - Veículos por Período -->
+      <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Veículos por Período</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque dolore magnam ad, reprehenderit
+              doloribus similique perspiciatis, ut laudantium pariatur culpa quam incidunt voluptate modi iste alias
+              nobis natus aperiam officiis?
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fechar</button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="table-container">
-      <h2>Veículos por Período
-        <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-            class="bi bi-box-arrow-up-right pb-1" viewBox="0 0 16 16">
-            <path fill-rule="evenodd"
-              d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
-            <path fill-rule="evenodd"
-              d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" />
-          </svg>
-        </button>
-      </h2>
-      <table id="table-read-axes-period">
-        <thead>
-          <tr>
-            <th>Data Inicial</th>
-            <th>Data Final</th>
-            <th>2 Eixos</th>
-            <th>3 Eixos</th>
-            <th>4 Eixos</th>
-            <th>5 Eixos</th>
-            <th>6 Eixos</th>
-            <th>7 Eixos</th>
-            <th>8 Eixos</th>
-            <th>Total</th>
-          </tr>
-        </thead>
-        <tbody>
-        </tbody>
-      </table>
-    </div>
+      <div class="table-container">
+        <h2>Status de pagamento
+          <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#exampleModal3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+              class="bi bi-box-arrow-up-right pb-1" viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
+              <path fill-rule="evenodd"
+                d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" />
+            </svg>
+          </button>
+        </h2>
+        <table id="payment-status-per-reading">
+          <thead>
+            <tr>
+              <th>Data</th>
+              <th>Placa</th>
+              <th>TagId</th>
+              <th>Atrasado</th>
+              <th>Pago</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
 
-    <!-- modal - Veículos por Período -->
-    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Veículos por Período</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque dolore magnam ad, reprehenderit doloribus similique perspiciatis, ut laudantium pariatur culpa quam incidunt voluptate modi iste alias nobis natus aperiam officiis?
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fechar</button>
+      <!-- modal - status de pagamento -->
+      <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Status de pagamento</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum voluptatibus ea dolore delectus veniam
+              corrupti facilis dolorem aliquid sed odio, maiores sunt quisquam voluptatum tenetur tempora voluptates,
+              esse est ratione.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fechar</button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    
-    <div class="table-container">
-      <h2>Status de pagamento
-        <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#exampleModal3">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-            class="bi bi-box-arrow-up-right pb-1" viewBox="0 0 16 16">
-            <path fill-rule="evenodd"
-              d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
-            <path fill-rule="evenodd"
-              d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" />
-          </svg>
-        </button>
-      </h2>
-      <table id="payment-status-per-reading">
-        <thead>
-          <tr>
-            <th>Data</th>
-            <th>Placa</th>
-            <th>TagId</th>
-            <th>Atrasado</th>
-            <th>Pago</th>
-            <th>Total</th>
-          </tr>
-        </thead>
-        <tbody>
-        </tbody>
-      </table>
-    </div>
-
-    <!-- modal - status de pagamento -->
-    <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Status de pagamento</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum voluptatibus ea dolore delectus veniam corrupti facilis dolorem aliquid sed odio, maiores sunt quisquam voluptatum tenetur tempora voluptates, esse est ratione.
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fechar</button>
-          </div>
-        </div>
-      </div>
-    </div>
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-<script src="../js/script.js"></script>
-<script src="../js/drawerResponsiveness.js"></script>
 <script src="../js/dashboard.js"></script>
 <script src="../storage/cameraData.js"></script>
+<script src="../js/appLayout.js"></script>
 </html>

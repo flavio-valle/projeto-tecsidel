@@ -1,0 +1,13 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    width: calc(100% - 80px); /* Ajuste para a largura da sidebar */
+    left: 80px; /* Ajuste para a largura da sidebar */
+    z-index: 1;
+    transition: left 0.3s, width 0.3s;
+}
+
+aside:hover + .navbar {
+    left: 250px;
+    width: calc(100% - 250px);
+}
