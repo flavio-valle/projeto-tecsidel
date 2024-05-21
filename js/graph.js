@@ -1,14 +1,18 @@
 
 const ctx = document.getElementById('myChart');
 
+
+
   new Chart(ctx, {
     type: 'bar',
     data: {
-      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+      labels: ['2 eixos', '3 eixos', '4 eixos', '5 eixos', '6 eixos', '7 eixos', '8 eixos'],
       datasets: [{
-        label: '# of Votes',
-        data: [1, 1, 1, 1, 2, 3],
+        label: 'My First Dataset',
+        data: [65, 59, 90, 81, 56, 55, 40],
         borderWidth: 2,
+        fill: true,
+        
       }]
     },
     options: {
@@ -20,6 +24,3 @@ const ctx = document.getElementById('myChart');
     }
   });
 
-  const ctx2 = document.getElementById('myChart2');
-
-    

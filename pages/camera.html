@@ -99,11 +99,11 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Status da Camera 2</h1>
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Status da Camera</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <img class="img-fluid" src="/assets/grafico.jpg" alt="Grafico Câmera">
+            <canvas class="lineChart"></canvas>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fechar</button>
@@ -155,7 +155,7 @@
           <div class="modal-body">
             <!-- colocar grafico de linha aqui -->
             <div>
-              <canvas id="myChart2"></canvas>
+              <canvas id="myChart"></canvas>
             </div>
             <!-- Fim Grafico de linha -->
           </div>
@@ -203,11 +203,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <!-- mudar grafico de barra para grafico de linha -->
-            <div>
-              <canvas id="myChart"></canvas>
-            </div>
-            <!-- fim grafico de linha -->
+            <canvas id="donnutChart"></canvas>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fechar</button>
@@ -222,6 +218,8 @@
   integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <script src="../js/script.js"></script>
 <script src="../js/graph.js"></script>
+<script src="../js/graph2.js"></script>
+<script src="../js/graph3.js"></script>
 <script src="../js/drawerResponsiveness.js"></script>
 <script src="../js/dashboard.js"></script>
 <script src="../storage/cameraData.js"></script>
