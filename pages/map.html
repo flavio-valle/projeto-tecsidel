@@ -6,15 +6,16 @@
     <title>Mapeamento de Antenas</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="map.css">
+    <link rel="stylesheet" href="/css/map.css">
     <link rel="stylesheet" href="/css/style.css">
-    <script src="/js/appLayout.js"></script>
+    
 </head>
 <body>
-    <header><!--         <div id="sidebar" style="display: block; margin-right: 5rem;"></div>
-        <div id="navbar" style="margin-top: 100px;"></div> --></header>
+    <header>
+        <div id="sidebar"></div>
+    </header>
     <div id="top-bar">
-        <div class="overview" id="ilus-home">
+        <div  class="overview"  id="ilus-home" style="margin-left: auto;">
             <span>23 Operantes </span>
             <span>2 Em Manutenção </span>
             <span>2 Inoperantes</span>
@@ -24,7 +25,7 @@
         </div>
     </div>
     <div id="content">
-        <div id="map"></div>
+        <div id="map" style="z-index: 0;"></div>
         <div id="toll-list-container">
             <div id="search-bar">
                 <input type="text" placeholder="Buscar Antena (unidade, Localização)" />
@@ -49,6 +50,7 @@
                     <p><strong>Unidade Cônego Domênico Rangoni</strong></p>
                     <button class="assign">Detalhes</button>
                 </div>
+                
             </div>
         </div>
     </div>
@@ -76,5 +78,6 @@
             }).addTo(map);
         });
     </script>
+    <script src="/js/appLayout.js"></script>
 </body>
 </html>
