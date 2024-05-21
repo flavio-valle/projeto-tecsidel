@@ -3,37 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interface de Mapa com Pedágios</title>
+    <title>Mapeamento de Antenas</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="map.css">
     <link rel="stylesheet" href="/css/style.css">
     <script src="/js/appLayout.js"></script>
 </head>
 <body>
-    <header>
-<!--         <div id="sidebar" style="display: block; margin-right: 5rem;"></div>
-        <div id="navbar" style="margin-top: 100px;"></div> -->
-    </header>
+    <header><!--         <div id="sidebar" style="display: block; margin-right: 5rem;"></div>
+        <div id="navbar" style="margin-top: 100px;"></div> --></header>
     <div id="top-bar">
         <div class="overview" id="ilus-home">
-            <span>22 Instalados</span>
-            <span>0 Em andamento</span>
-            <span>17 Verificados</span>
+            <span>23 Operantes </span>
+            <span>2 Em Manutenção </span>
+            <span>2 Inoperantes</span>
         </div>
         <div class="overview" id="lyzil">
-            <span class="users-count">1330</span>
-            <span>Tecsidel</span>
+            <span>Mapeamento de Antenas</span>
         </div>
     </div>
     <div id="content">
         <div id="map"></div>
         <div id="toll-list-container">
             <div id="search-bar">
-                <input type="text" placeholder="Buscar Pedágios (Nome, Localização)" />
-                <button>Buscar</button>
+                <input type="text" placeholder="Buscar Antena (unidade, Localização)" />
+                <button><i class="bi bi-search"></i></button>
             </div>
             <div id="toll-list">
-                <h2>Prontos</h2>
+                <h2>Manutenção em Andamento</h2>
                 <div class="toll active">
                     <p><strong>Unidade Rodovia dos Imigrantes</strong></p>
                     <button class="assign">Detalhes</button>
@@ -42,7 +40,7 @@
                     <p><strong>Unidade Anchieta</strong></p>                 
                     <button class="assign">Detalhes</button>
                 </div>
-                <h2>A fazer</h2>
+                <h2>Manutenção Pendente</h2>
                 <div class="toll inactive">
                     <p><strong>Unidade Piaçaguera</strong></p>
                     <button class="assign">Detalhes</button>

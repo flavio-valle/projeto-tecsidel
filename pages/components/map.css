@@ -26,10 +26,6 @@ body, html {
     margin-right: 10px;
 }
 
-.users-count {
-    font-size: 24px;
-    font-weight: bold;
-}
 
 #content {
     display: flex;
@@ -63,6 +59,22 @@ body, html {
 #search-bar button {
     width: 20%;
     padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0078d4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#search-bar button:hover {
+    background-color: #005a9e;
+}
+
+#search-bar button i {
+    font-size: 16px;
 }
 
 #toll-list {
@@ -151,5 +163,4 @@ body, html {
         align-items: flex-start;
     }
 }
-
 
