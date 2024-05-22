@@ -45,4 +45,10 @@ O projeto envolve o desenvolvimento de um aplicativo móvel para monitoramento e
 
 ---
 
-Sinta-se à vontade para personalizar este README com detalhes adicionais ou modificações específicas às necessidades do seu projeto.
+# COMO ABRIR O PROJETO
+
+1. É necessário estar com a estrutura de pastas definida da seguinte forma:
+![image](https://github.com/flavio-valle/projeto-tecsidel/assets/88721496/5778132d-dcc3-4e54-bbca-4c7cb660d81c)
+2. Abrir o login.html
+3. Preencher o formulário de login para liberar o botão (conteúdo qualquer por estar estático)
+4. navegar no projeto.
