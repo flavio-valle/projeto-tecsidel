@@ -45,7 +45,7 @@ O projeto envolve o desenvolvimento de um aplicativo móvel para monitoramento e
 
 ---
 
-# COMO ABRIR O PROJETO
+# COMO ABRIR O PROJETO (NECESSÁRIO EXECUTAR COM O LIVE SERVER)
 
 1. É necessário estar com a estrutura de pastas definida da seguinte forma:
 ![image](https://github.com/flavio-valle/projeto-tecsidel/assets/88721496/5778132d-dcc3-4e54-bbca-4c7cb660d81c)
